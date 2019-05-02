@@ -38,7 +38,7 @@ public class XmlProcessorTests extends ESTestCase {
         IngestDocument ingestDocument = RandomDocumentPicks.randomIngestDocument(random(), document);
 
         List<String> exclude = new ArrayList<String>();
-        XmlProcessor processor = new XmlProcessor(randomAsciiOfLength(10), "source_field", exclude);
+        XmlProcessor processor = new XmlProcessor(randomAlphaOfLength(10), "source_field", exclude);
         processor.execute(ingestDocument);
         Map<String, Object> data = ingestDocument.getSourceAndMetadata();
 
@@ -58,7 +58,7 @@ public class XmlProcessorTests extends ESTestCase {
         IngestDocument ingestDocument = RandomDocumentPicks.randomIngestDocument(random(), document);
 
         List<String> exclude = new ArrayList<String>();
-        XmlProcessor processor = new XmlProcessor(randomAsciiOfLength(10), "source_field", exclude);
+        XmlProcessor processor = new XmlProcessor(randomAlphaOfLength(10), "source_field", exclude);
         processor.execute(ingestDocument);
         Map<String, Object> data = ingestDocument.getSourceAndMetadata();
 
@@ -75,7 +75,7 @@ public class XmlProcessorTests extends ESTestCase {
 
         List<String> exclude = new ArrayList<String>();
         exclude.add("root-event2(.*)");
-        XmlProcessor processor = new XmlProcessor(randomAsciiOfLength(10), "source_field", exclude);
+        XmlProcessor processor = new XmlProcessor(randomAlphaOfLength(10), "source_field", exclude);
         processor.execute(ingestDocument);
         Map<String, Object> data = ingestDocument.getSourceAndMetadata();
 
@@ -91,7 +91,7 @@ public class XmlProcessorTests extends ESTestCase {
         IngestDocument ingestDocument = RandomDocumentPicks.randomIngestDocument(random(), document);
 
         List<String> exclude = new ArrayList<String>();
-        XmlProcessor processor = new XmlProcessor(randomAsciiOfLength(10), "source_field", exclude);
+        XmlProcessor processor = new XmlProcessor(randomAlphaOfLength(10), "source_field", exclude);
         processor.execute(ingestDocument);
         Map<String, Object> data = ingestDocument.getSourceAndMetadata();
 
@@ -111,7 +111,7 @@ public class XmlProcessorTests extends ESTestCase {
         IngestDocument ingestDocument = RandomDocumentPicks.randomIngestDocument(random(), document);
 
         List<String> exclude = new ArrayList<String>();
-        XmlProcessor processor = new XmlProcessor(randomAsciiOfLength(10), "source_field", exclude);
+        XmlProcessor processor = new XmlProcessor(randomAlphaOfLength(10), "source_field", exclude);
         processor.execute(ingestDocument);
         Map<String, Object> data = ingestDocument.getSourceAndMetadata();
 
