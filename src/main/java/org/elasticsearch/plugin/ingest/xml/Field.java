@@ -23,12 +23,12 @@ class Field {
     String name;
     int count;
 
-    public Field( String name ) {
+    Field( String name ) {
         this.name = name;
         this.count = 1;
     }
 
-    public Field( String name, int count ) {
+    Field( String name, int count ) {
         this.name = name;
         this.count = count;
     }
