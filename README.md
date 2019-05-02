@@ -69,7 +69,13 @@ POST _ingest/pipeline/xml-pipeline/_simulate
 In order to install this plugin, you need to create a zip distribution first by running
 
 ```bash
-gradle clean check
+git clone git@github.com:Pluggi/elasticsearch-ingest-xml
+
+docker run --rm \
+           -v $(realpath elasticsearch-ingest-xml/):/project \
+           -w /project \
+           gradle:jdk11 \
+           gradle build
 ```
 
 This will produce a zip file in `build/distributions`.
