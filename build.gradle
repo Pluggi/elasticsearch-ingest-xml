@@ -21,6 +21,9 @@ esplugin {
   name 'ingest-xml'
   description 'Parse domain-specific xml and ingest data.'
   classname 'org.elasticsearch.plugin.ingest.xml.IngestXmlPlugin'
+
+  licenseFile rootProject.file('LICENSE.txt')
+  noticeFile rootProject.file('NOTICE.txt')
 }
 
 // In this section you declare the dependencies for your production and test code
