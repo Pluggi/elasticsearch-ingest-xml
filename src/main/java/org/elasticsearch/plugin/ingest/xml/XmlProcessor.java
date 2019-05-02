@@ -57,7 +57,7 @@ public class XmlProcessor extends AbstractProcessor {
     }
 
     @Override
-    public void execute(IngestDocument ingestDocument) throws Exception {
+    public IngestDocument execute(IngestDocument ingestDocument) throws Exception {
 
         String xml = ingestDocument.getFieldValue(field, String.class);
 
@@ -73,6 +73,8 @@ public class XmlProcessor extends AbstractProcessor {
             Node root = doc.getDocumentElement();
             visitTree( root, "", false, ingestDocument, fields ); 
         }
+
+        return ingestDocument;
     }
 
     // DFS search of the tree
