@@ -21,17 +21,10 @@ import static org.elasticsearch.ingest.ConfigurationUtils.readStringProperty;
 import static org.elasticsearch.ingest.ConfigurationUtils.readOptionalList;
 
 import static org.w3c.dom.Node.ELEMENT_NODE;
-import static org.w3c.dom.Node.ATTRIBUTE_NODE;
 import static org.w3c.dom.Node.TEXT_NODE;
 import static org.w3c.dom.Node.CDATA_SECTION_NODE;
-import static org.w3c.dom.Node.ENTITY_REFERENCE_NODE;
-import static org.w3c.dom.Node.ENTITY_NODE;
-import static org.w3c.dom.Node.PROCESSING_INSTRUCTION_NODE;
 import static org.w3c.dom.Node.COMMENT_NODE;
 import static org.w3c.dom.Node.DOCUMENT_NODE;
-import static org.w3c.dom.Node.DOCUMENT_TYPE_NODE;
-import static org.w3c.dom.Node.DOCUMENT_FRAGMENT_NODE;
-import static org.w3c.dom.Node.NOTATION_NODE;
 
 import org.elasticsearch.ingest.AbstractProcessor;
 import org.elasticsearch.ingest.IngestDocument;
@@ -47,7 +40,6 @@ import java.util.List;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.w3c.dom.Document;
-import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NamedNodeMap;
 
