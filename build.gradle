@@ -6,12 +6,12 @@ buildscript {
   }
 
   dependencies {
-    classpath "org.elasticsearch.gradle:build-tools:${elasticsearchVersion}"
+    classpath "org.elasticsearch.gradle:build-tools:${System.env.ES_VERSION}"
   }
 }
 
 group = 'org.elasticsearch.plugin.ingest'
-version = '0.0.1'
+version = "${System.env.ES_VERSION}-1"
 
 apply plugin: 'java'
 apply plugin: 'elasticsearch.esplugin'
@@ -30,9 +30,9 @@ esplugin {
 // Note, the two dependencies are not really needed as the buildscript dependency gets them in already
 // they are just here as an example
 dependencies {
-  compile "org.elasticsearch:elasticsearch:${elasticsearchVersion}"
+  compile "org.elasticsearch:elasticsearch:${System.env.ES_VERSION}"
 
-  testCompile "org.elasticsearch.test:framework:${elasticsearchVersion}"
+  testCompile "org.elasticsearch.test:framework:${System.env.ES_VERSION}"
 }
 
 // Set to false to not use elasticsearch checkstyle rules
